@@ -1,0 +1,23 @@
+{
+ "model": "llama2",
+ "repo": "LM_2023_llama2-pytorch",
+ "target_repo": "LM_Dec_Base_LLaMA2",
+ "category": "Base",
+ "upstream": "rasbt/LLMs-from-scratch Llama 2 conversion code (Apache-2.0); license file missing in repo - add",
+ "unified": [
+  "hidden_dim 1408 (about 8/3 x dim); dtype float32 weights, bf16 autocast"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "overfit",
+ "started": "2026-10-19 14:36:43",
+ "smoke": false,
+ "first_ce": 5.733387470245361,
+ "last_ce": 0.0013863446656614542,
+ "passed": true,
+ "pass_loss": 0.5,
+ "steps": 400,
+ "seconds": 14.3,
+ "lr": 0.001,
+ "note": "overfit uses Adam 1e-3 on 4 x 256 bytes; only an implementation check"
+}

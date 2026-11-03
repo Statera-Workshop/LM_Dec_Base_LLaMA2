@@ -1,0 +1,103 @@
+{
+ "model": "llama2",
+ "repo": "LM_2023_llama2-pytorch",
+ "target_repo": "LM_Dec_Base_LLaMA2",
+ "category": "Base",
+ "upstream": "rasbt/LLMs-from-scratch Llama 2 conversion code (Apache-2.0); license file missing in repo - add",
+ "unified": [
+  "hidden_dim 1408 (about 8/3 x dim); dtype float32 weights, bf16 autocast"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "lm05",
+ "started": "2026-10-19 15:15:57",
+ "smoke": false,
+ "params": 19536384,
+ "micro_batch": null,
+ "steps": 6000,
+ "budget_steps": 6000,
+ "capped": false,
+ "batch": 32,
+ "train_len": 512,
+ "pairs": 16,
+ "bf16": true,
+ "minutes": 25.1,
+ "history": [
+  {
+   "step": 500,
+   "loss": 2.826414108276367,
+   "acc_train_len": 0.10107421875
+  },
+  {
+   "step": 1000,
+   "loss": 2.7070930004119873,
+   "acc_train_len": 0.11572265625
+  },
+  {
+   "step": 1500,
+   "loss": 2.5478477478027344,
+   "acc_train_len": 0.15185546875
+  },
+  {
+   "step": 2000,
+   "loss": 2.4372568130493164,
+   "acc_train_len": 0.1748046875
+  },
+  {
+   "step": 2500,
+   "loss": 2.4033069610595703,
+   "acc_train_len": 0.1943359375
+  },
+  {
+   "step": 3000,
+   "loss": 2.3280372619628906,
+   "acc_train_len": 0.19970703125
+  },
+  {
+   "step": 3500,
+   "loss": 2.237215518951416,
+   "acc_train_len": 0.2177734375
+  },
+  {
+   "step": 4000,
+   "loss": 2.2019548416137695,
+   "acc_train_len": 0.21923828125
+  },
+  {
+   "step": 4500,
+   "loss": 2.1197516918182373,
+   "acc_train_len": 0.2314453125
+  },
+  {
+   "step": 5000,
+   "loss": 2.0938053131103516,
+   "acc_train_len": 0.2294921875
+  },
+  {
+   "step": 5500,
+   "loss": 2.0710513591766357,
+   "acc_train_len": 0.232421875
+  },
+  {
+   "step": 6000,
+   "loss": 2.0251386165618896,
+   "acc_train_len": 0.2392578125
+  }
+ ],
+ "test": {
+  "512": {
+   "acc": 0.239501953125,
+   "answers": 8192
+  },
+  "1024": {
+   "acc": 0.1517333984375,
+   "answers": 8192
+  },
+  "2048": {
+   "acc": 0.129150390625,
+   "answers": 8192
+  }
+ },
+ "chance": 0.015625,
+ "seconds": 1506.1
+}

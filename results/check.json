@@ -1,0 +1,38 @@
+{
+ "model": "llama2",
+ "repo": "LM_2023_llama2-pytorch",
+ "target_repo": "LM_Dec_Base_LLaMA2",
+ "category": "Base",
+ "upstream": "rasbt/LLMs-from-scratch Llama 2 conversion code (Apache-2.0); license file missing in repo - add",
+ "unified": [
+  "hidden_dim 1408 (about 8/3 x dim); dtype float32 weights, bf16 autocast"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "check",
+ "started": "2026-10-19 14:21:37",
+ "smoke": false,
+ "params": 19536384,
+ "causality": {
+  "causal": true,
+  "uses_input": true,
+  "worst_leak": 0.0,
+  "min_effect": 2.5766592025756836,
+  "logit_scale": 2.5835872159729005,
+  "length": 256,
+  "positions": [
+   17,
+   101,
+   200
+  ]
+ },
+ "data_checks": [
+  "enwik8 train bytes  90,000,000 expected  90,000,000 OK",
+  "enwik8 valid bytes   5,000,000 expected   5,000,000 OK",
+  "enwik8 test  bytes   5,000,000 expected   5,000,000 OK",
+  "enwik8 distinct byte values in first 10M train bytes: 200 (vocab 256)",
+  "recall L=512 random gap: 16 answers/sample, keys/values/distractors disjoint OK",
+  "recall L=512 max gap: 16 answers/sample, keys/values/distractors disjoint OK"
+ ],
+ "seconds": 0.6
+}

@@ -1,0 +1,206 @@
+{
+ "model": "llama2",
+ "repo": "LM_2023_llama2-pytorch",
+ "target_repo": "LM_Dec_Base_LLaMA2",
+ "category": "Base",
+ "upstream": "rasbt/LLMs-from-scratch Llama 2 conversion code (Apache-2.0); license file missing in repo - add",
+ "unified": [
+  "hidden_dim 1408 (about 8/3 x dim); dtype float32 weights, bf16 autocast"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "lm05v2long",
+ "started": "2026-10-26 11:40:45",
+ "smoke": false,
+ "levels": {
+  "4": {
+   "queries": 16,
+   "distinct": false,
+   "steps": 30000,
+   "capped": false,
+   "diverged": false,
+   "bf16": true,
+   "final_loss": 0.01532064937055111,
+   "minutes": 113.4,
+   "history": [
+    {
+     "step": 2500,
+     "loss": 0.00020313846471253783,
+     "acc": 1.0
+    },
+    {
+     "step": 5000,
+     "loss": 5.626228085020557e-05,
+     "acc": 0.9951171875
+    },
+    {
+     "step": 7500,
+     "loss": 6.471857341239229e-05,
+     "acc": 1.0
+    },
+    {
+     "step": 10000,
+     "loss": 1.912570405693259e-05,
+     "acc": 1.0
+    },
+    {
+     "step": 12500,
+     "loss": 1.0267737025060342e-06,
+     "acc": 1.0
+    },
+    {
+     "step": 15000,
+     "loss": 0.00013551964366342872,
+     "acc": 0.998046875
+    },
+    {
+     "step": 17500,
+     "loss": 4.4796325937568326e-07,
+     "acc": 1.0
+    },
+    {
+     "step": 20000,
+     "loss": 4.940613393955573e-07,
+     "acc": 1.0
+    },
+    {
+     "step": 22500,
+     "loss": 1.5734111684650998e-06,
+     "acc": 1.0
+    },
+    {
+     "step": 25000,
+     "loss": 4.726460645088082e-08,
+     "acc": 1.0
+    },
+    {
+     "step": 27500,
+     "loss": 2.9846598863514373e-06,
+     "acc": 1.0
+    },
+    {
+     "step": 30000,
+     "loss": 0.01532064937055111,
+     "acc": 1.0
+    }
+   ],
+   "test": {
+    "512": {
+     "normal": 0.9996337890625,
+     "keys": 0.737548828125,
+     "values": 0.03955078125,
+     "true_recall": 0.2620849609375
+    },
+    "2048": {
+     "normal": 0.73974609375,
+     "keys": 0.5633544921875,
+     "values": 0.509765625,
+     "true_recall": 0.1763916015625
+    },
+    "8192": {
+     "normal": "n/a (RuntimeError)",
+     "keys": "n/a (RuntimeError)",
+     "values": "n/a (RuntimeError)"
+    }
+   },
+   "value_set_baseline": 0.25,
+   "chance": 0.015625,
+   "micro_batch": null
+  },
+  "16": {
+   "queries": 16,
+   "distinct": false,
+   "steps": 30000,
+   "capped": false,
+   "diverged": false,
+   "bf16": true,
+   "final_loss": 2.858685255050659,
+   "minutes": 113.5,
+   "history": [
+    {
+     "step": 2500,
+     "loss": 2.8912854194641113,
+     "acc": 0.0625
+    },
+    {
+     "step": 5000,
+     "loss": 2.855217456817627,
+     "acc": 0.05859375
+    },
+    {
+     "step": 7500,
+     "loss": 2.8493802547454834,
+     "acc": 0.064453125
+    },
+    {
+     "step": 10000,
+     "loss": 2.8203930854797363,
+     "acc": 0.068359375
+    },
+    {
+     "step": 12500,
+     "loss": 2.8548166751861572,
+     "acc": 0.0498046875
+    },
+    {
+     "step": 15000,
+     "loss": 2.831939697265625,
+     "acc": 0.0556640625
+    },
+    {
+     "step": 17500,
+     "loss": 2.8336124420166016,
+     "acc": 0.0576171875
+    },
+    {
+     "step": 20000,
+     "loss": 2.869673728942871,
+     "acc": 0.05859375
+    },
+    {
+     "step": 22500,
+     "loss": 2.8315672874450684,
+     "acc": 0.05078125
+    },
+    {
+     "step": 25000,
+     "loss": 2.9335215091705322,
+     "acc": 0.0654296875
+    },
+    {
+     "step": 27500,
+     "loss": 2.969482660293579,
+     "acc": 0.052734375
+    },
+    {
+     "step": 30000,
+     "loss": 2.858685255050659,
+     "acc": 0.0615234375
+    }
+   ],
+   "test": {
+    "512": {
+     "normal": 0.0595703125,
+     "keys": 0.059814453125,
+     "values": 0.0157470703125,
+     "true_recall": -0.000244140625
+    },
+    "2048": {
+     "normal": 0.0650634765625,
+     "keys": 0.0609130859375,
+     "values": 0.01904296875,
+     "true_recall": 0.004150390625
+    },
+    "8192": {
+     "normal": "n/a (RuntimeError)",
+     "keys": "n/a (RuntimeError)",
+     "values": "n/a (RuntimeError)"
+    }
+   },
+   "value_set_baseline": 0.0625,
+   "chance": 0.015625,
+   "micro_batch": null
+  }
+ },
+ "seconds": 13612.9
+}

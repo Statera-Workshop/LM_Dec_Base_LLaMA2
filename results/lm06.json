@@ -1,0 +1,150 @@
+{
+ "model": "llama2",
+ "repo": "LM_2023_llama2-pytorch",
+ "target_repo": "LM_Dec_Base_LLaMA2",
+ "category": "Base",
+ "upstream": "rasbt/LLMs-from-scratch Llama 2 conversion code (Apache-2.0); license file missing in repo - add",
+ "unified": [
+  "hidden_dim 1408 (about 8/3 x dim); dtype float32 weights, bf16 autocast"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "lm06",
+ "started": "2026-10-29 16:24:45",
+ "smoke": false,
+ "steps": 6000,
+ "capped": false,
+ "diverged": false,
+ "bf16": true,
+ "final_loss": 2.115614891052246,
+ "minutes": 25.0,
+ "history": [
+  {
+   "step": 500,
+   "loss": 3.825444221496582,
+   "acc": 0.08984375,
+   "acc_updated": 0.1015625,
+   "acc_unchanged": 0.078125,
+   "stale_rate": 0.0625
+  },
+  {
+   "step": 1000,
+   "loss": 2.71671462059021,
+   "acc": 0.21484375,
+   "acc_updated": 0.375,
+   "acc_unchanged": 0.0546875,
+   "stale_rate": 0.0234375
+  },
+  {
+   "step": 1500,
+   "loss": 2.4879848957061768,
+   "acc": 0.21875,
+   "acc_updated": 0.3984375,
+   "acc_unchanged": 0.0390625,
+   "stale_rate": 0.0234375
+  },
+  {
+   "step": 2000,
+   "loss": 2.464250326156616,
+   "acc": 0.22265625,
+   "acc_updated": 0.4140625,
+   "acc_unchanged": 0.03125,
+   "stale_rate": 0.0078125
+  },
+  {
+   "step": 2500,
+   "loss": 2.424093723297119,
+   "acc": 0.26171875,
+   "acc_updated": 0.4765625,
+   "acc_unchanged": 0.046875,
+   "stale_rate": 0.0078125
+  },
+  {
+   "step": 3000,
+   "loss": 2.321566104888916,
+   "acc": 0.24609375,
+   "acc_updated": 0.4453125,
+   "acc_unchanged": 0.046875,
+   "stale_rate": 0.0
+  },
+  {
+   "step": 3500,
+   "loss": 2.176870584487915,
+   "acc": 0.27734375,
+   "acc_updated": 0.5,
+   "acc_unchanged": 0.0546875,
+   "stale_rate": 0.0
+  },
+  {
+   "step": 4000,
+   "loss": 2.248816967010498,
+   "acc": 0.2734375,
+   "acc_updated": 0.5,
+   "acc_unchanged": 0.046875,
+   "stale_rate": 0.015625
+  },
+  {
+   "step": 4500,
+   "loss": 2.182682752609253,
+   "acc": 0.2890625,
+   "acc_updated": 0.5390625,
+   "acc_unchanged": 0.0390625,
+   "stale_rate": 0.0078125
+  },
+  {
+   "step": 5000,
+   "loss": 2.2383110523223877,
+   "acc": 0.28125,
+   "acc_updated": 0.53125,
+   "acc_unchanged": 0.03125,
+   "stale_rate": 0.0078125
+  },
+  {
+   "step": 5500,
+   "loss": 2.1889562606811523,
+   "acc": 0.27734375,
+   "acc_updated": 0.515625,
+   "acc_unchanged": 0.0390625,
+   "stale_rate": 0.0078125
+  },
+  {
+   "step": 6000,
+   "loss": 2.115614891052246,
+   "acc": 0.26953125,
+   "acc_updated": 0.5,
+   "acc_unchanged": 0.0390625,
+   "stale_rate": 0.015625
+  }
+ ],
+ "test": {
+  "512": {
+   "acc": 0.267578125,
+   "acc_updated": 0.5107421875,
+   "acc_unchanged": 0.0244140625,
+   "stale_rate": 0.0146484375
+  },
+  "2048": {
+   "acc": 0.15869140625,
+   "acc_updated": 0.263671875,
+   "acc_unchanged": 0.0537109375,
+   "stale_rate": 0.044921875
+  }
+ },
+ "config": {
+  "pairs": 8,
+  "updates": 4,
+  "queries": 4,
+  "train_len": 512,
+  "test_lens": [
+   512,
+   2048
+  ],
+  "batch": 32,
+  "steps": 6000,
+  "eval_every": 500,
+  "eval_samples": 512,
+  "max_hours": 1.5
+ },
+ "micro_batch": null,
+ "seconds": 1504.5
+}

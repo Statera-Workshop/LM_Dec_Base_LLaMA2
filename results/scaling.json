@@ -1,0 +1,59 @@
+{
+ "model": "llama2",
+ "repo": "LM_2023_llama2-pytorch",
+ "target_repo": "LM_Dec_Base_LLaMA2",
+ "category": "Base",
+ "upstream": "rasbt/LLMs-from-scratch Llama 2 conversion code (Apache-2.0); license file missing in repo - add",
+ "unified": [
+  "hidden_dim 1408 (about 8/3 x dim); dtype float32 weights, bf16 autocast"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "scaling",
+ "started": "2026-10-19 14:22:43",
+ "smoke": false,
+ "rows": [
+  {
+   "len": 512,
+   "train": {
+    "peak_mb": 237.3,
+    "ms": 24.6
+   },
+   "infer": {
+    "peak_mb": 61.6,
+    "ms": 8.0
+   }
+  },
+  {
+   "len": 1024,
+   "train": {
+    "peak_mb": 542.5,
+    "ms": 24.9
+   },
+   "infer": {
+    "peak_mb": 144.4,
+    "ms": 8.0
+   }
+  },
+  {
+   "len": 2048,
+   "train": {
+    "peak_mb": 1802.7,
+    "ms": 63.3
+   },
+   "infer": {
+    "peak_mb": 441.0,
+    "ms": 22.9
+   }
+  },
+  {
+   "len": 4096,
+   "note": "not supported (model built for <= 2048)"
+  },
+  {
+   "len": 8192,
+   "note": "not supported (model built for <= 2048)"
+  }
+ ],
+ "seconds": 1.7
+}
